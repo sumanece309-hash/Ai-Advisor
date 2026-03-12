@@ -595,5 +595,229 @@
       ],
       "duration_format": "See source PDF",
       "source_pdf": "COBIT 5 ® 2019 Training & Certification.pdf"
-    }
+    },
+
+
+    {
+        "course_id": "devops",
+        "title": "DevOps Certification Training",
+        "category": "IT / Cloud / DevOps",
+        "best_for_roles": [
+          "DevOps Engineer",
+          "Software Engineer",
+          "Cloud Engineer",
+          "Site Reliability Engineer",
+          "System Administrator"
+        ],
+        "recommended_experience": "2+ years IT or development experience",
+        "industries": ["IT", "Software", "Cloud", "FinTech", "SaaS"],
+        "description": "DevOps certification teaches collaboration between development and IT operations teams, enabling faster software delivery and improved infrastructure automation.",
+        "skills_you_learn": [
+          "Continuous Integration and Continuous Delivery",
+          "DevOps culture and collaboration practices",
+          "Infrastructure automation",
+          "Monitoring and reliability engineering",
+          "DevSecOps and security automation"
+        ],
+        "key_features": [
+          "40 hours live virtual training",
+          "Hands-on assignments",
+          "20+ DevOps tool demonstrations",
+          "Lifetime access to recordings",
+          "Course completion certificate"
+        ],
+        "career_benefits": [
+          "Become DevOps Engineer or Platform Engineer",
+          "Improve automation and deployment pipelines",
+          "Higher demand in cloud-native companies"
+        ]
+      },
+
+      {
+        "course_id": "salesforce_admin",
+        "title": "Salesforce Admin Certification Training",
+        "category": "CRM / Cloud",
+        "best_for_roles": [
+          "CRM Administrator",
+          "Salesforce Administrator",
+          "Business Analyst",
+          "Sales Operations Specialist"
+        ],
+        "recommended_experience": "Beginner to intermediate",
+        "industries": ["Sales", "CRM", "Retail", "SaaS", "Enterprise Software"],
+        "description": "Salesforce Admin certification teaches configuration and management of the Salesforce CRM platform including Sales Cloud and Service Cloud.",
+        "skills_you_learn": [
+          "Salesforce platform architecture",
+          "User management and security",
+          "Custom objects and fields",
+          "Automation and validation rules",
+          "Sales and service cloud configuration"
+        ],
+        "key_features": [
+          "Instructor-led training",
+          "Accredited courseware",
+          "Simulation exams",
+          "Industry case studies",
+          "Certification exam preparation"
+        ],
+        "career_benefits": [
+          "Salesforce Admin career path",
+          "CRM implementation expertise",
+          "High demand in enterprise SaaS companies"
+        ]
+      },
+
+
+
+{
+  "course_id": "data_science_r",
+  "title": "Data Science with R Certification",
+  "category": "Data Science / AI",
+  "best_for_roles": [
+    "Data Analyst",
+    "Data Scientist",
+    "Business Analyst",
+    "Research Analyst"
+  ],
+  "recommended_experience": "Basic programming or statistics helpful",
+  "industries": ["Finance", "Retail", "Insurance", "Airlines", "Analytics"],
+  "description": "Data Science with R certification teaches statistical analysis, predictive modeling and data visualization using R programming.",
+  "skills_you_learn": [
+    "Data exploration and visualization",
+    "Statistical analysis",
+    "Predictive modeling",
+    "Cluster analysis",
+    "Data manipulation with R"
+  ],
+  "key_features": [
+    "32 hours instructor-led training",
+    "24 hours self-paced learning",
+    "Hands-on projects",
+    "R CloudLab practice environment"
+  ],
+  "career_benefits": [
+    "Entry into data science roles",
+    "Data-driven decision making skills",
+    "High demand in analytics and AI fields"
+  ]
+},
+
+{
+    "course_id": "csm",
+    "title": "Certified Scrum Master (CSM)",
+    "category": "Agile / Project Management",
+    "best_for_roles": [
+      "Scrum Master",
+      "Project Manager",
+      "Agile Coach",
+      "Product Owner"
+    ],
+    "recommended_experience": "Basic Agile or project experience",
+    "industries": ["IT", "Product Development", "Software", "Consulting"],
+    "description": "CSM certification provides knowledge of Agile and Scrum frameworks to lead agile teams effectively.",
+    "skills_you_learn": [
+      "Scrum framework and ceremonies",
+      "Agile project management",
+      "Sprint planning and backlog management",
+      "Team facilitation and leadership"
+    ],
+    "key_features": [
+      "2 day instructor-led training",
+      "Simulation exams",
+      "PMI PDUs offered",
+      "Scrum Alliance certified trainer"
+    ],
+    "career_benefits": [
+      "Become Scrum Master",
+      "Lead Agile teams",
+      "Improve product delivery speed"
+    ]
+  },
+
+{
+  "course_id": "pmi_acp",
+  "title": "PMI-ACP Agile Certified Practitioner",
+  "category": "Agile / Project Management",
+  "best_for_roles": [
+    "Agile Project Manager",
+    "Scrum Master",
+    "Agile Coach",
+    "Product Manager"
+  ],
+  "recommended_experience": "Project management experience recommended",
+  "industries": ["IT", "Product Development", "Technology"],
+  "description": "PMI-ACP certification validates expertise across Agile frameworks including Scrum, Kanban, Lean and XP.",
+  "skills_you_learn": [
+    "Agile frameworks",
+    "Agile risk management",
+    "Agile project planning",
+    "Customer value prioritization",
+    "Agile product delivery"
+  ],
+  "key_features": [
+    "Instructor-led agile training",
+    "600 exam preparation questions",
+    "3 full-length practice tests",
+    "21 contact hours certificate"
+  ],
+  "career_benefits": [
+    "Senior Agile practitioner roles",
+    "Higher demand in agile organizations"
+  ]
+},
+{
+    "course_id": "itil_v4",
+    "title": "ITIL v4 Foundation Certification",
+    "category": "IT Service Management",
+    "best_for_roles": [
+      "IT Service Manager",
+      "IT Support Manager",
+      "Service Delivery Manager",
+      "IT Operations Manager"
+    ],
+    "recommended_experience": "IT or service management exposure",
+    "industries": ["IT", "Enterprise IT", "Cloud Services"],
+    "description": "ITIL v4 certification teaches best practices for IT service management and improving IT-enabled enterprises.",
+    "skills_you_learn": [
+      "IT service lifecycle",
+      "Service value system",
+      "ITIL guiding principles",
+      "Service management frameworks"
+    ],
+    "key_features": [
+      "2 day classroom training",
+      "Simulation exams",
+      "Authorized certification",
+      "Real-life case studies"
+    ],
+    "career_benefits": [
+      "Improve IT service operations",
+      "Qualify for service management roles"
+    ]
+  },
+
+{
+  "course_id": "lssyb",
+  "title": "Lean Six Sigma Yellow Belt",
+  "category": "Process Improvement",
+  "best_for_roles": [
+    "Process Analyst",
+    "Quality Analyst",
+    "Operations Executive"
+  ],
+  "recommended_experience": "Beginner",
+  "industries": ["Manufacturing", "Operations", "Healthcare", "Finance"],
+  "description": "Yellow Belt introduces Six Sigma concepts and teaches how to identify process inefficiencies and improve business quality.",
+  "skills_you_learn": [
+    "Six Sigma fundamentals",
+    "Process mapping",
+    "Quality metrics",
+    "Problem solving techniques"
+  ],
+  "career_benefits": [
+    "Entry into process improvement roles",
+    "Foundation for Green and Black Belt"
+  ]
+}
+
   ]
