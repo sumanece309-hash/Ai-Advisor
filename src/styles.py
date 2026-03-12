@@ -133,7 +133,7 @@ GLOBAL_CSS = """
     margin-bottom: 0.4rem;
 }
 [data-testid="stForm"] {
-    background: rgba(255,255,255,0.82);
+    background: #f8fafc;
     border: 1px solid rgba(255,255,255,0.8);
     border-radius: 28px;
     padding: 1.3rem;
