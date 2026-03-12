@@ -1,12 +1,12 @@
 import os
 import json
-import csv
 import base64
 from datetime import datetime, UTC
 from io import BytesIO
 
+import gspread
 import streamlit as st
-from dotenv import load_dotenv
+from google.oauth2.service_account import Credentials
 from openai import OpenAI
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT
@@ -16,11 +16,17 @@ from reportlab.platypus import ListFlowable, ListItem, Paragraph, SimpleDocTempl
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Attachment, Disposition, FileContent, FileName, FileType, Mail
 
-load_dotenv()
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY", "")
-FROM_EMAIL = os.getenv("FROM_EMAIL", "")
+def get_secret(name: str, default: str = "") -> str:
+    if name in st.secrets:
+        return st.secrets[name]
+    return os.getenv(name, default)
+
+
+OPENAI_API_KEY = get_secret("OPENAI_API_KEY")
+SENDGRID_API_KEY = get_secret("SENDGRID_API_KEY")
+FROM_EMAIL = get_secret("FROM_EMAIL")
+
 client = OpenAI(api_key=OPENAI_API_KEY) if OPENAI_API_KEY else None
 
 st.set_page_config(
@@ -40,6 +46,37 @@ def load_resources():
 
 
 RESOURCES = load_resources()
+
+
+def get_gsheet_worksheet():
+    scope = [
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive",
+    ]
+
+    creds = Credentials.from_service_account_info(
+        dict(st.secrets["gcp_service_account"]),
+        scopes=scope,
+    )
+    gc = gspread.authorize(creds)
+
+    sheet_name = st.secrets["google_sheet"]["sheet_name"]
+    worksheet_name = st.secrets["google_sheet"]["worksheet"]
+
+    spreadsheet = gc.open(sheet_name)
+    worksheet = spreadsheet.worksheet(worksheet_name)
+    return worksheet
+
+
+def save_lead_to_gsheet(row: dict):
+    worksheet = get_gsheet_worksheet()
+    headers = list(row.keys())
+    existing_headers = worksheet.row_values(1)
+
+    if not existing_headers:
+        worksheet.append_row(headers)
+
+    worksheet.append_row([str(row.get(h, "")) for h in headers])
 
 
 def recommend_cert(role: str, industry: str, years_exp: int, goal: str):
@@ -106,6 +143,7 @@ Do not invent external links. Do not mention you are an AI.
 def generate_report_text(prompt: str) -> str:
     if not client:
         return "ERROR: OPENAI_API_KEY not configured."
+
     resp = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
@@ -196,17 +234,21 @@ def create_pdf_bytes(title: str, report_text: str, branding_line: str = "Excelsi
     for ln in lines:
         if not ln.strip():
             continue
+
         is_numbered_heading = len(ln) > 2 and ln[0].isdigit() and ln[1:3] == ") "
         is_colon_heading = ln.endswith(":") and len(ln) < 80
+
         if is_numbered_heading or is_colon_heading:
             flush()
             current_heading = ln.split(") ", 1)[1].strip() if is_numbered_heading else ln[:-1].strip()
             continue
+
         if ln.lstrip().startswith(("-", "•", "*")):
             bullet = ln.lstrip()[1:].strip()
             if bullet:
                 current_bullets.append(bullet)
             continue
+
         current_paras.append(ln.strip())
 
     flush()
@@ -216,6 +258,7 @@ def create_pdf_bytes(title: str, report_text: str, branding_line: str = "Excelsi
         for p in paras:
             story.append(Paragraph(p, body_style))
             story.append(Spacer(1, 6))
+
         if bullets:
             items = [ListItem(Paragraph(b, bullet_para_style), leftIndent=14) for b in bullets]
             story.append(
@@ -249,20 +292,23 @@ def create_pdf_bytes(title: str, report_text: str, branding_line: str = "Excelsi
     return buffer.getvalue()
 
 
-def save_lead_csv(row: dict, path="leads.csv"):
-    file_exists = os.path.exists(path)
-    with open(path, "a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=list(row.keys()))
-        if not file_exists:
-            writer.writeheader()
-        writer.writerow(row)
-
-
-def send_email_with_pdf(to_email: str, subject: str, body: str, pdf_bytes: bytes, filename="Certification_Roadmap.pdf"):
+def send_email_with_pdf(
+    to_email: str,
+    subject: str,
+    body: str,
+    pdf_bytes: bytes,
+    filename="Certification_Roadmap.pdf",
+):
     if not SENDGRID_API_KEY or not FROM_EMAIL:
         return False, "SendGrid not configured (SENDGRID_API_KEY / FROM_EMAIL missing)."
 
-    message = Mail(from_email=FROM_EMAIL, to_emails=to_email, subject=subject, plain_text_content=body)
+    message = Mail(
+        from_email=FROM_EMAIL,
+        to_emails=to_email,
+        subject=subject,
+        plain_text_content=body,
+    )
+
     encoded = base64.b64encode(pdf_bytes).decode()
     message.attachment = Attachment(
         FileContent(encoded),
@@ -482,6 +528,7 @@ st.markdown(
 
 st.write("")
 feature_col1, feature_col2, feature_col3 = st.columns(3)
+
 with feature_col1:
     st.markdown(
         """
@@ -492,6 +539,7 @@ with feature_col1:
         """,
         unsafe_allow_html=True,
     )
+
 with feature_col2:
     st.markdown(
         """
@@ -502,6 +550,7 @@ with feature_col2:
         """,
         unsafe_allow_html=True,
     )
+
 with feature_col3:
     st.markdown(
         """
@@ -525,11 +574,13 @@ with left:
 
     with st.form("advisor_form"):
         c1, c2 = st.columns(2)
+
         with c1:
             name = st.text_input("Full name *", placeholder="Alex Morgan")
             email = st.text_input("Work email *", placeholder="alex@company.com")
             role = st.text_input("Current role/title *", placeholder="Project Coordinator, IT Support, DevOps Engineer")
             years_exp = st.number_input("Years of experience *", min_value=0, max_value=40, value=3)
+
         with c2:
             industry = st.text_input("Industry", placeholder="Healthcare, Finance, Manufacturing, SaaS")
             salary_range = st.selectbox(
@@ -579,7 +630,7 @@ with right:
         """,
         unsafe_allow_html=True,
     )
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
 
 if submitted:
     if not name or not email or not role or not goal:
@@ -615,21 +666,24 @@ if submitted:
         branding_line="Excelsior Certification",
     )
 
-    save_lead_csv(
-        {
-            "timestamp_utc": datetime.now(UTC).isoformat(),
-            "name": name,
-            "email": email,
-            "role": role,
-            "years_exp": int(years_exp),
-            "industry": industry,
-            "salary_range": salary_range,
-            "goal": goal,
-            "timeline": timeline,
-            "recommended_cert": chosen,
-            "source": "ai_assessment_v2_beautiful_ui",
-        }
-    )
+    lead_row = {
+        "timestamp_utc": datetime.now(UTC).isoformat(),
+        "name": name,
+        "email": email,
+        "role": role,
+        "years_exp": int(years_exp),
+        "industry": industry,
+        "salary_range": salary_range,
+        "goal": goal,
+        "timeline": timeline,
+        "recommended_cert": chosen,
+        "source": "ai_assessment_v2_beautiful_ui",
+    }
+
+    try:
+        save_lead_to_gsheet(lead_row)
+    except Exception as e:
+        st.warning(f"Lead could not be saved to Google Sheets: {e}")
 
     st.write("")
     r1, r2 = st.columns([0.95, 1.05], gap="large")
@@ -639,10 +693,12 @@ if submitted:
         st.markdown('<div class="result-badge">Recommended Track</div>', unsafe_allow_html=True)
         st.markdown(f"## {chosen}")
         st.write("Based on the profile details submitted, this is the best-fit starting point for the user journey.")
+
         if res_list:
             st.markdown("**Starter resources**")
             for item in res_list:
                 st.markdown(f"- [{item['title']}]({item['url']})")
+
         st.download_button(
             label="⬇️ Download PDF roadmap",
             data=pdf_bytes,
@@ -650,13 +706,13 @@ if submitted:
             mime="application/pdf",
             use_container_width=True,
         )
-        st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
     with r2:
         st.markdown('<div class="result-card">', unsafe_allow_html=True)
         st.markdown('<div class="result-badge">Report Preview</div>', unsafe_allow_html=True)
         st.text_area("Preview", report_text, height=420, label_visibility="collapsed")
-        st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
     if consent:
         ok, msg = send_email_with_pdf(
@@ -670,6 +726,9 @@ if submitted:
         else:
             st.warning(f"Email not sent: {msg}")
 
-    st.info("Suggested next conversion step: add a primary CTA button such as ‘Book a free strategy call’. ")
+    st.info("Suggested next conversion step: add a primary CTA button such as ‘Book a free strategy call’.")
 
-st.markdown('<div class="footer-note">Designed for a premium first impression, stronger lead capture, and a smoother certification discovery journey.</div>', unsafe_allow_html=True)
+st.markdown(
+    '<div class="footer-note">Designed for a premium first impression, stronger lead capture, and a smoother certification discovery journey.</div>',
+    unsafe_allow_html=True,
+)
