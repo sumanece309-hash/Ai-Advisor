@@ -1,0 +1,599 @@
+[
+    {
+      "id": "pmp",
+      "course_name": "PMP® (Project Management Professional)",
+      "category": "Project Management",
+      "level": "advanced",
+      "summary": "Globally recognized project management certification focused on leading teams, planning, budget, schedule, quality, procurement, governance, risks, stakeholders, and business value.",
+      "best_for": [
+        "experienced project managers",
+        "team leads moving into project leadership",
+        "program or delivery professionals",
+        "professionals managing cross-functional teams"
+      ],
+      "good_match_if": [
+        "user wants project management career growth",
+        "user wants a globally recognized PM credential",
+        "user already works on projects and wants leadership credibility",
+        "user wants structured knowledge across planning, execution, governance, and value delivery"
+      ],
+      "avoid_if": [
+        "user is a complete beginner with no project management foundation",
+        "user wants a specialized analytics, CRM, or DevOps path",
+        "user wants only entry-level project certification"
+      ],
+      "key_topics": [
+        "team building",
+        "project methodology selection",
+        "scope planning",
+        "budget and resources",
+        "schedule management",
+        "quality management",
+        "procurement",
+        "risk management",
+        "stakeholder engagement",
+        "governance",
+        "business value delivery",
+        "continuous improvement"
+      ],
+      "what_user_will_study": [
+        "how to build and lead high-performing teams",
+        "how to plan scope, budget, resources, schedule, and quality",
+        "how to assess and manage risks",
+        "how to engage stakeholders and manage changes",
+        "how to align projects with business value"
+      ],
+      "career_benefits": [
+        "supports growth into project manager and senior project leadership roles",
+        "improves credibility for managing complex projects",
+        "helps demonstrate broad project delivery knowledge"
+      ],
+      "duration_format": "4-day intensive boot camp, classroom/live online/self-paced options, 35 contact hours",
+      "source_pdf": "PMP - Project Managment Professional.pdf"
+    },
+    {
+      "id": "prince2_fp",
+      "course_name": "PRINCE2® Foundation & Practitioner",
+      "category": "Project Management",
+      "level": "foundation_to_practitioner",
+      "summary": "Structured project management certification path focused on PRINCE2 principles, terminology, roles, staged delivery, governance, and controlled execution in business environments.",
+      "best_for": [
+        "project managers",
+        "project coordinators",
+        "professionals working in structured delivery environments",
+        "people wanting PRINCE2 methodology knowledge"
+      ],
+      "good_match_if": [
+        "user wants a structured, process-oriented project management method",
+        "user works in organizations that value governance and stage-based delivery",
+        "user wants both foundation and practitioner progression"
+      ],
+      "avoid_if": [
+        "user wants Agile-first facilitation instead of structured project governance",
+        "user wants analytics, DevOps, CRM, or business analysis specialization",
+        "user wants a pure beginner credential with lighter terminology load"
+      ],
+      "key_topics": [
+        "what is a project",
+        "project manager role",
+        "project management foundations",
+        "PRINCE2 principles",
+        "continued business justification",
+        "roles and responsibilities",
+        "manage by stages",
+        "manage by exception",
+        "focus on products",
+        "tailoring PRINCE2"
+      ],
+      "what_user_will_study": [
+        "the PRINCE2 framework and terminology",
+        "how structured project delivery works",
+        "how to tailor the method to different project environments",
+        "how staged governance improves delivery control"
+      ],
+      "career_benefits": [
+        "helps validate structured project management capability",
+        "useful for organizations using formal governance methods",
+        "supports project delivery roles in public and private sectors"
+      ],
+      "duration_format": "4-day intensive training, exam prep, classroom/live online/self-paced, 35 contact hours",
+      "source_pdf": "PRINCE2® Foundation & Practitioner course.pdf"
+    },
+    {
+      "id": "capm",
+      "course_name": "CAPM® (Certified Associate in Project Management)",
+      "category": "Project Management",
+      "level": "entry",
+      "summary": "Entry-level project management certification for people starting careers as project managers or project team members, aligned with PMBOK concepts, processes, and terminology.",
+      "best_for": [
+        "beginners in project management",
+        "project coordinators",
+        "project team members",
+        "students or early-career professionals entering PM"
+      ],
+      "good_match_if": [
+        "user wants an entry-level PM certification",
+        "user is building PM vocabulary and fundamentals",
+        "user wants a bridge into formal project management roles"
+      ],
+      "avoid_if": [
+        "user already has substantial PM experience and needs senior-level validation",
+        "user wants business analysis, CRM, analytics, or DevOps specialization"
+      ],
+      "key_topics": [
+        "CAPM exam requirements and syllabus",
+        "PMI ethics and professional conduct",
+        "project management framework",
+        "project lifecycle",
+        "process groups",
+        "role of project manager",
+        "project integration management",
+        "scope management",
+        "schedule management"
+      ],
+      "what_user_will_study": [
+        "core PMBOK-aligned project management concepts",
+        "project lifecycle and process groups",
+        "project manager role and responsibilities",
+        "foundations of integration, scope, and schedule management"
+      ],
+      "career_benefits": [
+        "good first credential for entering project teams",
+        "helps build confidence and terminology for PM roles",
+        "supports transition toward more advanced project certifications later"
+      ],
+      "duration_format": "4-day training, e-learning content, 23 contact hours",
+      "source_pdf": "Certified Associate in Project Management (CAPM®) (4).pdf"
+    },
+    {
+      "id": "cbap",
+      "course_name": "CBAP® (Certified Business Analysis Professional)",
+      "category": "Business Analysis",
+      "level": "advanced",
+      "summary": "Advanced business analysis certification for professionals with substantial BA experience, aligned to BABOK v3 and core business analysis knowledge areas.",
+      "best_for": [
+        "experienced business analysts",
+        "senior analysts",
+        "requirements and stakeholder professionals",
+        "people already working deeply in business analysis"
+      ],
+      "good_match_if": [
+        "user already has strong BA experience",
+        "user wants senior business analysis credibility",
+        "user works with elicitation, requirements, stakeholder collaboration, and solution evaluation"
+      ],
+      "avoid_if": [
+        "user is new to business analysis",
+        "user wants entry-level BA path",
+        "user wants project management, DevOps, data science, or CRM administration path"
+      ],
+      "key_topics": [
+        "BABOK v3 perspectives",
+        "business analysis core concepts",
+        "requirements classification",
+        "document analysis",
+        "stakeholders",
+        "planning and monitoring",
+        "elicitation and collaboration",
+        "analysis governance",
+        "information management",
+        "performance improvements"
+      ],
+      "what_user_will_study": [
+        "business analysis concepts and BABOK structure",
+        "how to plan and monitor business analysis work",
+        "how to elicit and confirm requirements",
+        "how to manage stakeholder collaboration and analysis information"
+      ],
+      "career_benefits": [
+        "supports senior BA and lead analyst progression",
+        "strengthens professional credibility in requirements and stakeholder work",
+        "useful for enterprise analysis and structured BA practice"
+      ],
+      "duration_format": "2/3-day classroom training, 21 CDUs and 24 PMI-PDU/contact hours",
+      "source_pdf": "CBAP Flyer.pdf"
+    },
+    {
+      "id": "ccba",
+      "course_name": "CCBA® (Certification of Competency in Business Analysis)",
+      "category": "Business Analysis",
+      "level": "mid",
+      "summary": "Business analysis certification covering BABOK v3 concepts, planning, elicitation, lifecycle management, strategy analysis, requirements analysis, and solution evaluation.",
+      "best_for": [
+        "mid-level business analysts",
+        "professionals transitioning into business analysis",
+        "analysts wanting IIBA-aligned structure"
+      ],
+      "good_match_if": [
+        "user wants business analysis growth but is not yet senior enough for CBAP",
+        "user works on requirements, elicitation, and solution evaluation",
+        "user wants stronger BA structure across Agile, BI, and IT perspectives"
+      ],
+      "avoid_if": [
+        "user wants a pure project management or DevOps path",
+        "user wants CRM admin or data science specialization"
+      ],
+      "key_topics": [
+        "BABOK v3",
+        "planning and monitoring",
+        "elicitation and collaboration",
+        "requirements lifecycle management",
+        "strategy analysis",
+        "requirement analysis and design definition",
+        "solution evaluation",
+        "Agile BI and IT perspectives",
+        "business architecture",
+        "process management perspective"
+      ],
+      "what_user_will_study": [
+        "core business analysis workflow",
+        "requirements and lifecycle thinking",
+        "strategy analysis and solution evaluation",
+        "how BA is applied across business and IT contexts"
+      ],
+      "career_benefits": [
+        "good progression credential for growing analysts",
+        "helps formalize BA skills and language",
+        "supports analyst roles in product, business, and transformation teams"
+      ],
+      "duration_format": "3-day classroom/live online/self-paced options",
+      "source_pdf": "CCBA (Certification of Competency in Business Analysis).pdf"
+    },
+    {
+      "id": "pmi_rmp",
+      "course_name": "PMI-RMP® (Risk Management Professional)",
+      "category": "Project Risk Management",
+      "level": "specialist",
+      "summary": "Specialized PMI-accredited course for mastering risk planning, risk identification, qualitative and quantitative analysis, and risk response in projects.",
+      "best_for": [
+        "project managers handling high-risk initiatives",
+        "risk specialists",
+        "PMO professionals",
+        "professionals who want project risk expertise"
+      ],
+      "good_match_if": [
+        "user wants specialization in project risk",
+        "user works with uncertainty, controls, analysis, or governance",
+        "user wants stronger formal risk planning and response skills"
+      ],
+      "avoid_if": [
+        "user wants broad project management foundation only",
+        "user is a total beginner with no project context",
+        "user wants data science, CRM, or DevOps path"
+      ],
+      "key_topics": [
+        "risk management fundamentals",
+        "risk management plan",
+        "communication foundation",
+        "leadership in risk contexts",
+        "stakeholder management",
+        "risk identification",
+        "risk register",
+        "qualitative risk analysis",
+        "quantitative risk analysis",
+        "risk response planning"
+      ],
+      "what_user_will_study": [
+        "how to create a risk management plan",
+        "how to identify and document risks",
+        "how qualitative and quantitative risk analysis work",
+        "how to plan responses for known and unknown risks"
+      ],
+      "career_benefits": [
+        "helps position the learner for risk-focused PM and governance work",
+        "strengthens confidence in uncertainty-heavy projects",
+        "useful for PMO, delivery, and compliance-sensitive environments"
+      ],
+      "duration_format": "3-day boot camp, 30 contact hours, classroom/live online/self-paced",
+      "source_pdf": "PMI-RMP®(Risk Management Professional Certification Training) (1).pdf"
+    },
+    {
+      "id": "conflict_management",
+      "course_name": "Conflict Management",
+      "category": "Leadership & Interpersonal Skills",
+      "level": "general",
+      "summary": "Course focused on identifying, understanding, preventing, and resolving conflict in professional and personal settings.",
+      "best_for": [
+        "team leads",
+        "managers",
+        "HR and people-facing professionals",
+        "project managers",
+        "professionals dealing with team friction"
+      ],
+      "good_match_if": [
+        "user wants stronger leadership and people-management skills",
+        "user struggles with team conflict or stakeholder tension",
+        "user wants quick practical upskilling rather than a long technical certification"
+      ],
+      "avoid_if": [
+        "user wants a technical or domain certification",
+        "user wants project management methodology depth",
+        "user wants analytics, CRM, BA, or DevOps specialization"
+      ],
+      "key_topics": [
+        "conflict in organizations",
+        "forms of conflict",
+        "causes of conflict",
+        "conflicting styles and goals",
+        "conflicting pressures and roles",
+        "techniques such as forcing collaborating compromising withdrawing smoothing",
+        "interpersonal and interdepartmental conflict",
+        "role of third-party resolution",
+        "receiving feedback",
+        "avoiding workplace conflict",
+        "future conflict prevention"
+      ],
+      "what_user_will_study": [
+        "why conflict happens in organizations",
+        "how to identify different forms of conflict",
+        "practical techniques for resolution",
+        "how to prevent repeated conflict in teams"
+      ],
+      "career_benefits": [
+        "improves management and communication effectiveness",
+        "supports team leadership and stakeholder handling",
+        "useful add-on skill for managers and project professionals"
+      ],
+      "duration_format": "1-day / 8-hour training, 8 contact hours",
+      "source_pdf": "(Conflict Management Course & Certification Certification Training).pdf"
+    },
+    {
+      "id": "devops",
+      "course_name": "DevOps® Certification Training",
+      "category": "Cloud & DevOps",
+      "level": "mid",
+      "summary": "Hands-on DevOps-focused training covering collaboration between development and operations, automation, CI/CD, cloud, containers, Kubernetes, DevSecOps, and site reliability concepts.",
+      "best_for": [
+        "software engineers",
+        "IT operations professionals",
+        "cloud engineers",
+        "infrastructure professionals",
+        "people moving into DevOps roles"
+      ],
+      "good_match_if": [
+        "user wants automation and deployment skills",
+        "user wants cloud or platform engineering career growth",
+        "user is in software or IT operations"
+      ],
+      "avoid_if": [
+        "user wants business analysis or project management path",
+        "user wants CRM administration path",
+        "user wants pure analytics path"
+      ],
+      "key_topics": [
+        "CI/CD",
+        "cloud",
+        "containers",
+        "Kubernetes",
+        "DevSecOps",
+        "toolchains",
+        "site reliability concepts",
+        "collaboration between development and operations"
+      ],
+      "what_user_will_study": [
+        "deployment automation and continuous delivery concepts",
+        "container and orchestration fundamentals",
+        "DevOps culture and practices",
+        "security and reliability considerations"
+      ],
+      "career_benefits": [
+        "supports transition toward DevOps and platform-oriented roles",
+        "strengthens practical automation and cloud understanding",
+        "useful for software and IT infrastructure careers"
+      ],
+      "duration_format": "40 hours live training with assignments, demos, and PDUs",
+      "source_pdf": "DevOps® Certification Training.pdf"
+    },
+    {
+      "id": "salesforce_admin",
+      "course_name": "Salesforce Admin® Certification Training",
+      "category": "CRM & Business Systems",
+      "level": "mid",
+      "summary": "Salesforce administration training focused on configuring and managing Sales Cloud and Service Cloud, users, objects, fields, security, workflows, data, and reporting.",
+      "best_for": [
+        "CRM administrators",
+        "operations professionals",
+        "business systems professionals",
+        "people moving into Salesforce administration roles"
+      ],
+      "good_match_if": [
+        "user wants CRM administration career growth",
+        "user likes system configuration more than coding-heavy roles",
+        "user works with sales, support, or customer operations systems"
+      ],
+      "avoid_if": [
+        "user wants project management or Agile career path",
+        "user wants data science or DevOps path"
+      ],
+      "key_topics": [
+        "Sales Cloud",
+        "Service Cloud",
+        "objects",
+        "field types",
+        "security controls",
+        "role hierarchy",
+        "workflow automation",
+        "data management",
+        "reporting"
+      ],
+      "what_user_will_study": [
+        "how Salesforce is configured and administered",
+        "how data, users, roles, and permissions are managed",
+        "how workflows and reports support business processes"
+      ],
+      "career_benefits": [
+        "supports Salesforce admin and business systems roles",
+        "useful for customer operations and CRM environments",
+        "can strengthen profile for no-code/low-code enterprise system careers"
+      ],
+      "duration_format": "See source PDF",
+      "source_pdf": "Salesforce Admin® Certification Training.pdf"
+    },
+    {
+      "id": "data_science_r",
+      "course_name": "Data Science with R® Certification Training",
+      "category": "Data Science & Analytics",
+      "level": "mid",
+      "summary": "Data science training covering data exploration, visualization, predictive and descriptive analytics, R packages, statistical concepts, clustering, and forecasting.",
+      "best_for": [
+        "analysts",
+        "aspiring data scientists",
+        "quantitative professionals",
+        "people interested in statistical modeling"
+      ],
+      "good_match_if": [
+        "user wants analytics or data science career growth",
+        "user enjoys numbers, statistics, and data-driven decision making",
+        "user wants hands-on work with R and modeling"
+      ],
+      "avoid_if": [
+        "user wants project management, Agile, CRM, or DevOps path",
+        "user dislikes quantitative or analytical work"
+      ],
+      "key_topics": [
+        "data exploration",
+        "data visualization",
+        "predictive analytics",
+        "descriptive analytics",
+        "R packages",
+        "statistical concepts",
+        "clustering",
+        "forecasting"
+      ],
+      "what_user_will_study": [
+        "how to analyze and visualize data in R",
+        "how to apply predictive and descriptive techniques",
+        "how statistical thinking supports business insights"
+      ],
+      "career_benefits": [
+        "supports movement into analytics and data-oriented roles",
+        "strengthens quantitative problem-solving profile",
+        "useful across industries like retail finance insurance and airlines"
+      ],
+      "duration_format": "See source PDF",
+      "source_pdf": "Data Science with R® Certification Training.pdf"
+    },
+    {
+      "id": "csm",
+      "course_name": "CSM® (Certified Scrum Master)",
+      "category": "Agile & Scrum",
+      "level": "foundation_to_mid",
+      "summary": "Scrum-focused Agile training centered on Scrum roles, ceremonies, backlog management, user stories, and facilitating Agile team collaboration.",
+      "best_for": [
+        "Scrum masters",
+        "project coordinators in Agile teams",
+        "delivery professionals",
+        "team facilitators"
+      ],
+      "good_match_if": [
+        "user wants to facilitate Agile teams",
+        "user works in Scrum environments",
+        "user wants role clarity around ceremonies and team collaboration"
+      ],
+      "avoid_if": [
+        "user wants broader multi-method Agile coverage instead of Scrum-specific focus",
+        "user wants technical or analytics path"
+      ],
+      "key_topics": [
+        "Scrum roles",
+        "ceremonies",
+        "backlogs",
+        "user stories",
+        "Agile team collaboration"
+      ],
+      "what_user_will_study": [
+        "how Scrum teams operate",
+        "how to facilitate ceremonies and support delivery flow",
+        "how to work with backlogs and user stories"
+      ],
+      "career_benefits": [
+        "supports Scrum Master and Agile team coordination roles",
+        "helps professionals operate effectively in Agile product teams"
+      ],
+      "duration_format": "See source PDF",
+      "source_pdf": "CSM®(Certified Scrum Master Certification Training).pdf"
+    },
+    {
+      "id": "pmi_acp",
+      "course_name": "PMI-ACP® (Agile Certified Practitioner)",
+      "category": "Agile & Scrum",
+      "level": "advanced",
+      "summary": "Broad Agile certification covering Scrum, Kanban, Lean, XP, prioritization, value delivery, stakeholder engagement, Agile metrics, and Agile leadership.",
+      "best_for": [
+        "experienced Agile practitioners",
+        "project managers working in Agile environments",
+        "delivery leaders",
+        "professionals wanting broader Agile coverage beyond Scrum"
+      ],
+      "good_match_if": [
+        "user already works in Agile teams",
+        "user wants broader Agile credibility across frameworks",
+        "user wants leadership-oriented Agile depth"
+      ],
+      "avoid_if": [
+        "user is a beginner needing first Scrum exposure",
+        "user wants purely technical or business analysis path"
+      ],
+      "key_topics": [
+        "Scrum",
+        "Kanban",
+        "Lean",
+        "XP",
+        "prioritization",
+        "stakeholder engagement",
+        "Agile metrics",
+        "value delivery",
+        "Agile leadership"
+      ],
+      "what_user_will_study": [
+        "how multiple Agile approaches differ and complement each other",
+        "how to prioritize and deliver value in Agile settings",
+        "how stakeholders and metrics fit into Agile delivery"
+      ],
+      "career_benefits": [
+        "supports experienced Agile delivery and transformation roles",
+        "broadens credibility beyond Scrum-only environments"
+      ],
+      "duration_format": "See source PDF",
+      "source_pdf": "PMI – ACP® (Agile Certified Practitioner).pdf"
+    },
+    {
+      "id": "cobit2019",
+      "course_name": "COBIT® 2019 Training & Certification",
+      "category": "IT Governance & Control",
+      "level": "specialist",
+      "summary": "IT governance and control framework training aligned to governance requirements, business risk, control systems, and organizational oversight.",
+      "best_for": [
+        "IT governance professionals",
+        "audit and compliance professionals",
+        "risk and control specialists",
+        "IT managers with governance responsibilities"
+      ],
+      "good_match_if": [
+        "user works in governance risk audit or control-heavy environments",
+        "user wants IT governance framework knowledge",
+        "user is interested in process control and oversight"
+      ],
+      "avoid_if": [
+        "user wants technical engineering or analytics path",
+        "user wants project management or Scrum facilitation path"
+      ],
+      "key_topics": [
+        "IT governance",
+        "business risk",
+        "control requirements",
+        "governance framework concepts"
+      ],
+      "what_user_will_study": [
+        "how governance frameworks structure IT oversight",
+        "how control and risk thinking are applied in organizations",
+        "how governance supports business alignment"
+      ],
+      "career_benefits": [
+        "supports governance, audit, and control-oriented careers",
+        "useful for professionals working in regulated or high-control environments"
+      ],
+      "duration_format": "See source PDF",
+      "source_pdf": "COBIT 5 ® 2019 Training & Certification.pdf"
+    }
+  ]

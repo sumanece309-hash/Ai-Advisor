@@ -13,6 +13,7 @@ def get_gsheet_worksheet():
         dict(st.secrets["gcp_service_account"]),
         scopes=scope,
     )
+
     gc = gspread.authorize(creds)
 
     sheet_name = st.secrets["google_sheet"]["sheet_name"]
