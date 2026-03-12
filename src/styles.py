@@ -164,6 +164,48 @@ GLOBAL_CSS = """
 @media (max-width: 900px) {
     .hero-title { font-size: 2.25rem; }
     .stat-grid { grid-template-columns: 1fr; }
+
+/* Fix white text inside form section */
+[data-testid="stForm"] label,
+[data-testid="stForm"] p,
+[data-testid="stForm"] div,
+[data-testid="stForm"] span,
+[data-testid="stForm"] h1,
+[data-testid="stForm"] h2,
+[data-testid="stForm"] h3,
+[data-testid="stForm"] h4,
+[data-testid="stForm"] h5,
+[data-testid="stForm"] h6 {
+    color: #101828 !important;
+}
+
+/* Fix section headings */
+.section-title,
+.section-copy,
+.mini-title,
+.mini-copy {
+    color: #101828 !important;
+}
+
+/* Fix selectbox and input label text */
+.stSelectbox label,
+.stTextInput label,
+.stTextArea label,
+.stMultiSelect label,
+.stCheckbox label {
+    color: #101828 !important;
+}
+
+/* Fix markdown text in columns/cards */
+.element-container,
+.stMarkdown,
+.stMarkdown p,
+.stMarkdown div,
+.stMarkdown span {
+    color: #101828;
+}
+
+
 }
 </style>
 """
