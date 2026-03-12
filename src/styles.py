@@ -19,6 +19,16 @@ GLOBAL_CSS = """
     box-shadow: 0 30px 60px rgba(2, 6, 23, 0.20);
     border: 1px solid rgba(255,255,255,0.10);
 }
+
+.form-section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f2937;  /* dark gray */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
 .hero-kicker {
     display: inline-block;
     font-size: 0.78rem;

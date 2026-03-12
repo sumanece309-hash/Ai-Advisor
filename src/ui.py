@@ -257,7 +257,10 @@ def render_form_and_sidebar():
         )
 
         with st.form("advisor_form"):
-            st.markdown("### Basic details")
+            st.markdown(
+                '<div class="form-section-title">Basic details</div>',
+                unsafe_allow_html=True,
+            )
             c1, c2 = st.columns(2)
 
             with c1:
