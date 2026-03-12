@@ -64,8 +64,9 @@ Return valid JSON in exactly this shape:
 
 Scoring guidance:
 - fit_score must be between 1 and 10
-- evaluate based on current role, target direction, goals, interests, experience, and study time
+- evaluate based on current role, target role, goals, interests, experience, industry, certifications, and study time
 - prefer the most career-relevant course, not the most prestigious one
+- use the user's preferred area strongly, but not blindly
 """
 
 
@@ -105,16 +106,24 @@ def build_report_text(profile: dict, result: dict) -> str:
     lines.append(f"- Name: {profile['name']}")
     lines.append(f"- Current role: {profile['current_role']}")
     lines.append(f"- Industry: {profile['industry']}")
-    lines.append(f"- Years of experience: {profile['years_experience']}")
+    lines.append(f"- Experience level: {profile['experience_level']}")
     lines.append(f"- Career goal: {profile['career_goal']}")
     lines.append(f"- Preferred area: {profile['preferred_area']}")
-    lines.append(f"- Study time per week: {profile['study_time_per_week']} hours")
+    lines.append(f"- Study time per week: {profile['study_time_per_week']}")
     if profile.get("target_role"):
         lines.append(f"- Target role: {profile['target_role']}")
+    if profile.get("current_skill_level"):
+        lines.append(f"- Current skill confidence: {profile['current_skill_level']}")
+    if profile.get("work_preference"):
+        lines.append(f"- Work preferences: {', '.join(profile['work_preference'])}")
+    if profile.get("existing_certifications"):
+        lines.append(f"- Existing certifications: {', '.join(profile['existing_certifications'])}")
     if profile.get("current_skills"):
         lines.append(f"- Current skills: {profile['current_skills']}")
     if profile.get("biggest_career_challenge"):
         lines.append(f"- Biggest career challenge: {profile['biggest_career_challenge']}")
+    if profile.get("additional_notes"):
+        lines.append(f"- Additional notes: {profile['additional_notes']}")
 
     lines.append("")
     lines.append("2) Recommended Certification")
@@ -188,24 +197,28 @@ st.write("")
 form_data = render_form_and_sidebar()
 
 if form_data["submitted"]:
-    name = form_data.get("name", "")
-    email = form_data.get("email", "")
-    role = form_data.get("role", "")
-    years_exp = form_data.get("years_exp", 0)
-    industry = form_data.get("industry", "")
-    salary_range = form_data.get("salary_range", "")
-    goal = form_data.get("goal", "")
-    timeline = form_data.get("timeline", "")
-    time_per_week = form_data.get("time_per_week", 0)
+    name = form_data.get("name", "").strip()
+    email = form_data.get("email", "").strip()
+    current_role = form_data.get("current_role", "").strip()
+    experience_level = form_data.get("experience_level", "").strip()
+    industry = form_data.get("industry", "").strip()
+    salary_range = form_data.get("salary_range", "").strip()
+    career_goal = form_data.get("career_goal", "").strip()
+    timeline = form_data.get("timeline", "").strip()
+    study_time_per_week = form_data.get("study_time_per_week", "").strip()
     consent = form_data.get("consent", False)
 
-    # New optional fields
-    target_role = form_data.get("target_role", "")
-    preferred_area = form_data.get("preferred_area", "")
-    current_skills = form_data.get("current_skills", "")
-    biggest_career_challenge = form_data.get("biggest_career_challenge", "")
+    target_role = form_data.get("target_role", "").strip()
+    preferred_area = form_data.get("preferred_area", "").strip()
+    current_skill_level = form_data.get("current_skill_level", "").strip()
+    work_preference = form_data.get("work_preference", [])
+    existing_certifications = form_data.get("existing_certifications", [])
+    current_skills = form_data.get("current_skills", "").strip()
+    biggest_career_challenge = form_data.get("biggest_career_challenge", "").strip()
+    additional_notes = form_data.get("additional_notes", "").strip()
+    phone_number = form_data.get("phone_number", "").strip()
 
-    if not name or not email or not role or not goal:
+    if not name or not email or not current_role or not career_goal or not preferred_area:
         st.error("Please complete all required fields marked with *.")
         st.stop()
 
@@ -217,17 +230,22 @@ if form_data["submitted"]:
     profile = {
         "name": name,
         "email": email,
-        "current_role": role,
-        "years_experience": int(years_exp),
+        "phone_number": phone_number,
+        "current_role": current_role,
+        "experience_level": experience_level,
         "industry": industry,
         "salary_range": salary_range,
-        "career_goal": goal,
-        "study_time_per_week": int(time_per_week),
+        "career_goal": career_goal,
+        "study_time_per_week": study_time_per_week,
         "timeline": timeline,
         "target_role": target_role,
         "preferred_area": preferred_area,
+        "current_skill_level": current_skill_level,
+        "work_preference": work_preference,
+        "existing_certifications": existing_certifications,
         "current_skills": current_skills,
         "biggest_career_challenge": biggest_career_challenge,
+        "additional_notes": additional_notes,
     }
 
     with st.spinner("Analyzing your profile and matching the best course..."):
@@ -251,17 +269,21 @@ if form_data["submitted"]:
         "timestamp_utc": datetime.now(UTC).isoformat(),
         "name": name,
         "email": email,
-        "role": role,
-        "years_exp": int(years_exp),
+        "phone_number": phone_number,
+        "current_role": current_role,
+        "experience_level": experience_level,
         "industry": industry,
         "salary_range": salary_range,
-        "goal": goal,
+        "career_goal": career_goal,
         "timeline": timeline,
         "preferred_area": preferred_area,
         "target_role": target_role,
+        "current_skill_level": current_skill_level,
+        "work_preference": ", ".join(work_preference),
+        "existing_certifications": ", ".join(existing_certifications),
         "recommended_cert": primary["course_name"],
         "fit_score": primary["fit_score"],
-        "source": "ai_course_catalog_matcher_v1",
+        "source": "ai_course_catalog_matcher_v2",
     }
 
     try:
