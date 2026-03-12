@@ -15,7 +15,7 @@ GLOBAL_CSS = """
     padding: 2.4rem 2.2rem;
     border-radius: 28px;
     background: linear-gradient(135deg, #0f172a 0%, #0b3b8a 55%, #1d4ed8 100%);
-    color: white;
+    color: #d1d5db;
     box-shadow: 0 30px 60px rgba(2, 6, 23, 0.20);
     border: 1px solid rgba(255,255,255,0.10);
 }
@@ -57,7 +57,7 @@ GLOBAL_CSS = """
     backdrop-filter: blur(10px);
 }
 .stat-value {
-    color: white;
+    color: #d1d5db;
     font-size: 1.15rem;
     font-weight: 800;
     margin-bottom: 0.2rem;
@@ -87,7 +87,7 @@ GLOBAL_CSS = """
     backdrop-filter: blur(14px);
 }
 .mini-card {
-    background: white;
+    background: #d1d5db;
     border: 1px solid #e4e7ec;
     border-radius: 20px;
     padding: 1.05rem 1rem;
